@@ -97,8 +97,8 @@ namespace HospitalManagementSystem.Application.Services
 
             var result = await signInManager.PasswordSignInAsync(user, model.Password, model.RememberMe,
                                                                  lockoutOnFailure: true);
-      
-
+            if(!result.Succeeded)
+                return Result.Failure<LoginResponseModel, DomainError>(new DomainError("Invalid Password or Email"));
 
             return new LoginResponseModel
             {

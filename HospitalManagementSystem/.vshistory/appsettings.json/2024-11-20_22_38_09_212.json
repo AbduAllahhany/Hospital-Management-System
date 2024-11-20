@@ -1,0 +1,19 @@
+{
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=.\\SQLEXPRESS;DataBase = HospitalTest;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False"
+  },
+  "Hospital": {
+    "Email": "Hospital.DepiProject@outlook.com",
+    "Name": "Hospital"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "SendGrid": {
+    "SecretKey": ""
+  }
+}

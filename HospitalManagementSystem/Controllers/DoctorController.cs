@@ -180,7 +180,7 @@ namespace HospitalManagementSystem.Controllers
             var patient = await unitOfWork.Doctors.FindAsync(x => x.UserId == Id);
             if (patient == null) return View("Error");
             var temp = await unitOfWork.Appointments.FindAllAsync(a => a.DoctorId == patient.Id && a.Status == Status.Confirmed, ["Patient"]);
-            if (temp == null) return View(new List<PatientAppointmentsModel>());
+            if (temp == null) return View(new List<DoctorAppointmentsModel>());
 
             IEnumerable<DoctorAppointmentsModel> model = temp.Select(a => new DoctorAppointmentsModel
             {
